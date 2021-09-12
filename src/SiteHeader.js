@@ -1,8 +1,9 @@
 import SiteHeaderItem from "./SiteHeaderItem";
+import "./SiteHeader.css";
 
 function SiteHeader() {
     return (
-        <header>
+        <header className="SiteHeader">
             <div>
                 <a
                     href={ window.location.href }
@@ -10,7 +11,7 @@ function SiteHeader() {
                     React Todo-list
                 </a>
             </div>
-            <ol>
+            <ol className="SiteHeaderContainer">
                 <SiteHeaderItem
                     value="Create new todo"
                     onClick={(e) => {
