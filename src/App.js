@@ -6,9 +6,9 @@ import './App.css';
 class App extends React.Component{
     constructor(props) {
         super(props);
-        this.setState({
+        this.state = {
             todoList: [],
-        })
+        };
     }
 
     render() {
@@ -24,12 +24,26 @@ class App extends React.Component{
         )
     }
 
-    addTodo() {
+    addTodo = () => {
         // TODO: Finish method
         console.log("WIP: addTodo called")
+        const todoList = this.state.todoList;
+        const todo = this.WIPGetTodo();
+        this.setState({
+            todoList: todoList.concat([
+                todo,
+            ])
+        })
+        console.log(this.state.todoList);
     }
 
-
+    WIPGetTodo() {
+        return {
+            title: "todo title",
+            content: "todo content",
+            dateAdded: "todo date added",
+        }
+    }
 }
 
 export default App;
