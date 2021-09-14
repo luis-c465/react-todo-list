@@ -3,7 +3,7 @@ import React from "react";
 class Todo extends React.Component {
     render() {
         return (
-            <div>
+            <div className="todo">
                 <h2>{ this.props.title }</h2>
                 <p>{ this.props.content }</p>
                 <h3>{ this.props.dateAdded }</h3>

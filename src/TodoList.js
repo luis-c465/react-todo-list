@@ -13,7 +13,7 @@ class TodoList extends React.Component {
             )
         });
         return (
-            <ol className="TodoList">
+            <ol className="todo-list">
                 {todoList}
             </ol>
         )

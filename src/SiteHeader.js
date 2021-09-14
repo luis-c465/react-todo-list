@@ -6,7 +6,7 @@ import reactLogo from "./logo.svg"
 class SiteHeader extends React.Component{
     render() {
         return (
-            <header className="SiteHeader">
+            <header className="site-header">
                 <div>
                     <img
                         className="logo"

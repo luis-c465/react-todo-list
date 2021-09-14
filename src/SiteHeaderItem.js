@@ -2,7 +2,7 @@ import React from "react";
 
 function SiteHeaderItem(props) {
     return (
-        <li>
+        <li className="site-header-item">
             <a
                 href={props.href}
                 onClick={(e) => {
