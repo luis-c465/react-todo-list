@@ -3,7 +3,7 @@ import Todo from "./Todo";
 
 class TodoList extends React.Component {
     render() {
-        const todoList = this.props.todoList.map((step, todo) => {
+        const todoList = this.props.todo.map((step, todo) => {
             return (
                 <Todo
                     title={todo.title}
