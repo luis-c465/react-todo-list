@@ -25,16 +25,13 @@ class App extends React.Component{
     }
 
     addTodo = () => {
-        // TODO: Finish method
-        console.log("WIP: addTodo called")
         const todoList = this.state.todoList;
         const todo = this.WIPGetTodo();
         this.setState({
             todoList: todoList.concat([
                 todo,
             ])
-        })
-        console.log(this.state.todoList);
+        });
     }
 
     WIPGetTodo() {
