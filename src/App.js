@@ -21,7 +21,7 @@ class App extends React.Component{
                     onClose={() => this.setState({ showModal: false })}
                     title="Modal title"
                 >
-                    <p1>Modal content</p1>
+                    <p>Modal content</p>
                 </Modal>
 
                 <SiteHeader
