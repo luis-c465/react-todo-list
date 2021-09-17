@@ -1,4 +1,5 @@
 import React from "react"
+import Modal from "./Modal";
 import SiteHeader from './SiteHeader';
 import TodoList from "./TodoList";
 import './App.css';
@@ -8,12 +9,21 @@ class App extends React.Component{
         super(props);
         this.state = {
             todoList: [],
+            showModal: false,
         };
     }
 
     render() {
         return (
             <>
+                <Modal
+                    show={this.state.showModal}
+                    onClose={() => this.setState({ showModal: false })}
+                    title="Modal title"
+                >
+                    <p1>Modal content</p1>
+                </Modal>
+
                 <SiteHeader
                     addTodo={ this.addTodo }
                 />
@@ -25,6 +35,10 @@ class App extends React.Component{
     }
 
     addTodo = () => {
+        this.setState({
+            showModal: true,
+        });
+
         const todoList = this.state.todoList;
         const todo = this.WIPGetTodo();
         this.setState({
