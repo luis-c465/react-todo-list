@@ -5,25 +5,21 @@ import Todo from "./Todo";
 // and add todo key
 // which is an immutable number of how many todos have been added
 // ? should uses state ?
-class TodoList extends React.Component {
-
-    render() {
-        const todoList = this.props.todo.map(todo => {
-            return (
-                <Todo
-                    title={todo.title}
-                    content={todo.content}
-                    dateBy={todo.dateBy.toString()}
-                    dateAdded={todo.dateAdded.toString()}
-                />
-            )
-        });
+export default function TodoList(props) {
+    const todoList = props.todo.map(todo => {
         return (
-            <ol className="todo-list">
-                {todoList}
-            </ol>
+            <Todo
+                title={todo.title}
+                content={todo.content}
+                dateBy={todo.dateBy.toString()}
+                dateAdded={todo.dateAdded.toString()}
+            />
         )
-    }
-}
+    });
 
-export default TodoList;
+    return (
+        <ol className="todo-list">
+            {todoList}
+        </ol>
+    )
+}
