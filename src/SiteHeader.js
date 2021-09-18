@@ -24,6 +24,11 @@ export default function SiteHeader(props) {
                     onClick={ () => props.addTodo() }
                     href=""
                 />
+                <SiteHeaderItem
+                    value="Clear todo list"
+                    onClick={() => props.clearTodo()}
+                    href=""
+                />
             </ol>
         </header>
     )
