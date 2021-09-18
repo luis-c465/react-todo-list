@@ -2,6 +2,7 @@ import React from "react"
 import Modal from "./Modal";
 import SiteHeader from './SiteHeader';
 import TodoList from "./TodoList";
+import MakeTodoForm from "./MakeTodoForm";
 import './App.css';
 
 class App extends React.Component{
@@ -21,11 +22,15 @@ class App extends React.Component{
                     onClose={() => this.setState({ showModal: false })}
                     title="Modal title"
                 >
-                    <p>Modal content</p>
+                    <MakeTodoForm callback={todo => {
+                        this.addTodo(todo);
+                        this.setState({ showModal: false });
+                    }}
+                    />
                 </Modal>
 
                 <SiteHeader
-                    addTodo={ this.addTodo }
+                    addTodo={() => this.setState({showModal: true})}
                 />
                 <TodoList
                     todo={ this.state.todoList }
@@ -34,17 +39,13 @@ class App extends React.Component{
         )
     }
 
-    addTodo = () => {
-        this.setState({
-            showModal: true,
-        });
-
+    addTodo = todo => {
+        // FIXME
         const todoList = this.state.todoList;
-        const todo = this.WIPGetTodo();
         this.setState({
             todoList: todoList.concat([
                 todo,
-            ])
+            ]),
         });
     }
 
