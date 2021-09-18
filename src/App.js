@@ -5,7 +5,7 @@ import TodoList from "./TodoList";
 import MakeTodoForm from "./MakeTodoForm";
 import './App.css';
 
-class App extends React.Component{
+export default class App extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -40,7 +40,6 @@ class App extends React.Component{
     }
 
     addTodo = todo => {
-        // FIXME
         const todoList = this.state.todoList;
         this.setState({
             todoList: todoList.concat([
@@ -48,14 +47,4 @@ class App extends React.Component{
             ]),
         });
     }
-
-    WIPGetTodo() {
-        return {
-            title: "todo title",
-            content: "todo content",
-            dateAdded: "todo date added",
-        }
-    }
 }
-
-export default App;
