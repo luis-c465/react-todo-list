@@ -7,7 +7,8 @@ export default function MakeTodoForm(props) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Todo title"
+            <input autoFocus type="text"
+                placeholder="Todo title"
                 ref={titleEl} />
             <textarea placeholder="Todo content"
                 ref={contentEl} />
