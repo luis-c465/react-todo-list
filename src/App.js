@@ -8,8 +8,9 @@ import './App.css';
 export default class App extends React.Component{
     constructor(props) {
         super(props);
+        console.log(localStorage.getItem("todolist"));
         this.state = {
-            todoList: [],
+            todoList: JSON.parse(localStorage.getItem("todolist")) ?? [],
             showModal: false,
         };
     }
@@ -40,11 +41,8 @@ export default class App extends React.Component{
     }
 
     addTodo = todo => {
-        const todoList = this.state.todoList;
-        this.setState({
-            todoList: todoList.concat([
-                todo,
-            ]),
-        });
+        const todoList = this.state.todoList.concat([todo]);
+        this.setState({todoList: todoList});
+        localStorage.setItem("todolist", JSON.stringify(todoList))
     }
 }
