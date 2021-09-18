@@ -1,15 +1,9 @@
-import React from "react";
-
-class Todo extends React.Component {
-    render() {
-        return (
-            <div className="todo">
-                <h2>{ this.props.title }</h2>
-                <p>{ this.props.content }</p>
-                <h3>{ this.props.dateAdded }</h3>
-            </div>
-        )
-    }
+export default function Todo(props) {
+    return (
+        <div className="todo">
+            <h2>{ props.title }</h2>
+            <p>{ props.content }</p>
+            <h3>{ props.dateAdded }</h3>
+        </div>
+    )
 }
-
-export default Todo;
