@@ -1,4 +1,5 @@
-import { useRef } from "react"
+import "./MakeTodoForm.css";
+import { useRef } from "react";
 
 export default function MakeTodoForm(props) {
     const titleEl = useRef(null);
@@ -6,15 +7,19 @@ export default function MakeTodoForm(props) {
     const dateByEl = useRef(null);
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="todo-form">
             <input autoFocus type="text"
                 placeholder="Todo title"
                 ref={titleEl} />
             <textarea placeholder="Todo content"
                 ref={contentEl} />
-            <input type="date" defaultValue={getDateInputToday()}
-                ref={dateByEl} />
-            <input type="submit" value="create" />
+
+            <div>
+                <input type="date" defaultValue={getDateInputToday()}
+                    ref={dateByEl} />
+                <input type="submit" value="create" />
+            </div>
+
         </form>
     )
 
