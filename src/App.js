@@ -20,7 +20,7 @@ export default class App extends React.Component{
                 <Modal
                     show={this.state.showModal}
                     onClose={() => this.setState({ showModal: false })}
-                    title="Modal title"
+                    title="Create todo"
                 >
                     <MakeTodoForm callback={todo => {
                         this.addTodo(todo);
@@ -33,9 +33,7 @@ export default class App extends React.Component{
                     addTodo={() => this.setState({ showModal: true })}
                     clearTodo={() => this.clearTodo()}
                 />
-                <TodoList
-                    todo={ this.state.todoList }
-                />
+                <TodoList todo={ this.state.todoList } />
             </>
         )
     }
