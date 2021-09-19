@@ -8,7 +8,11 @@ export default function TodoList(props) {
                 content={todo.content}
                 dateBy={todo.dateBy.toLocaleString()}
                 dateAdded={todo.dateAdded.toLocaleString()}
-                remove={() => props.removeTodo(index)}
+                // FIXME: Remove button removes incorrect todo
+                // due to index of removeTodo not changing
+                // to match index of corresponding todo
+                // when props.todolist changes
+                remove={() => props.removeTodo(+todo.dateAdded)}
                 key={+todo.dateAdded}
             />
         )

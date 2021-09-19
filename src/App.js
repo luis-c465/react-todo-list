@@ -64,18 +64,28 @@ export default class App extends React.Component{
         this.setTodoList(todolist);
     }
 
-    removeTodo = (index) => {
-        const todolist = this.state.todoList
-        const newTodoList = [
-            ...todolist.splice(0, index),
-            ...todolist.splice(index + 1)
-        ]
+    removeTodo = (dateAddedMS) => {
+        const index = this.getTodoIndex(dateAddedMS);
+        const newTodoList = this.removeElm(index, this.state.todoList);
         this.setTodoList(newTodoList);
     }
 
     setTodoList = (todolist) => {
         this.setState({ todoList: todolist });
         localStorage.setItem("todolist", JSON.stringify(todolist))
+    }
+
+    getTodoIndex = (dateAddedMS) => {
+        return this.state.todoList.slice(0).findIndex(todo => {
+            return +todo.dateAdded === dateAddedMS;
+        })
+    }
+
+    removeElm(index, array) {
+        return [
+            ...array.slice(0, index),
+            ...array.slice(index + 1),
+        ]
     }
 
 }
