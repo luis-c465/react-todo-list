@@ -20,4 +20,11 @@
   list-style: none;
   display: inline-block;
   margin: 2px;
+  padding: 6px;
+  border: 2px;
+  border-radius: 16px;
+}
+
+.site-header-item:hover {
+  background-color: lightblue;
 }
