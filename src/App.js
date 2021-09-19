@@ -8,8 +8,9 @@ import './App.css';
 export default class App extends React.Component{
     constructor(props) {
         super(props);
+        const todolist = localStorage.getItem("todolist");
         this.state = {
-            todoList: JSON.parse(localStorage.getItem("todolist")) ?? [],
+            todoList: JSON.parse(todolist, this.json_deserialize_helper) ?? [],
             showModal: false,
         };
     }
@@ -36,6 +37,18 @@ export default class App extends React.Component{
                 <TodoList todo={ this.state.todoList } />
             </>
         )
+    }
+
+    // By Juliane Holzt on stack overflow
+    json_deserialize_helper(key,value) {
+        if ( typeof value === 'string' ) {
+            var regexp;
+            regexp = /^\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ$/.exec(value);
+            if ( regexp ) {
+                return new Date(value);
+            }
+        }
+        return value;
     }
 
     addTodo = todo => {
