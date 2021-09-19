@@ -6,9 +6,9 @@ export default function TodoList(props) {
             <Todo
                 title={todo.title}
                 content={todo.content}
-                dateBy={todo.dateBy.toString()}
-                dateAdded={todo.dateAdded.toString()}
-                key={todo.dateAdded}
+                dateBy={todo.dateBy.toLocaleString()}
+                dateAdded={todo.dateAdded.toLocaleString()}
+                key={+todo.dateAdded}
             />
         )
     });
