@@ -6,6 +6,7 @@
 
 .remove-button {
   all: unset;
+  cursor: pointer;
   color: red;
   text-align: center;
   justify-self: right;
