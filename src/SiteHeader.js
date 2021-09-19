@@ -5,9 +5,8 @@ import reactLogo from "./logo.svg"
 export default function SiteHeader(props) {
     return (
         <header className="site-header">
-            <div>
+            <div className="site-logo">
                 <img
-                    className="logo"
                     src={ reactLogo }
                     alt="React Logo"
                 >
