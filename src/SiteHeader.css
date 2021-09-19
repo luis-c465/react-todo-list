@@ -1,8 +1,23 @@
-.SiteHeaderContainer {
-  display: inline-block;
+.site-header {
+  display: flex;
+  border: 5px;
+  border-bottom: solid 0.3rem;
 }
 
-.logo {
+.site-logo {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-logo img {
   width: 40px;
   height: 40px;
+}
+
+.site-header-item {
+  list-style: none;
+  display: inline-block;
+  margin: 2px;
 }
