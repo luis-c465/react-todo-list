@@ -34,7 +34,10 @@ export default class App extends React.Component{
                     addTodo={() => this.setState({ showModal: true })}
                     clearTodo={() => this.clearTodo()}
                 />
-                <TodoList todo={ this.state.todoList } />
+                <TodoList
+                    todo={this.state.todoList}
+                    removeTodo={this.removeTodo}
+                />
             </>
         )
     }
@@ -61,8 +64,18 @@ export default class App extends React.Component{
         this.setTodoList(todolist);
     }
 
+    removeTodo = (index) => {
+        const todolist = this.state.todoList
+        const newTodoList = [
+            ...todolist.splice(0, index),
+            ...todolist.splice(index + 1)
+        ]
+        this.setTodoList(newTodoList);
+    }
+
     setTodoList = (todolist) => {
         this.setState({ todoList: todolist });
         localStorage.setItem("todolist", JSON.stringify(todolist))
     }
+
 }
