@@ -1,4 +1,18 @@
 .todo {
+  position: relative;
   border: 2.5px;
   border-style: groove;
+  width: 65%;
+}
+
+.remove-button {
+  all: unset;
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0px;
+  width: 26px;
+  height: 26px;
 }
