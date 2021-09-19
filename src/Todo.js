@@ -5,7 +5,8 @@ export default function Todo(props) {
         <div className="todo">
             <h2>{ props.title }</h2>
             <p>{ props.content }</p>
-            <h3>{ props.dateAdded }</h3>
+            <h4>Date by: { props.dateBy }</h4>
+            <h4>Date added: { props.dateAdded }</h4>
         </div>
     )
 }
