@@ -1,7 +1,7 @@
 import Todo from "./Todo";
 
 export default function TodoList(props) {
-    const todoList = props.todo.map((todo, index) => {
+    const todoList = props.todo.map((todo) => {
         return (
             <Todo
                 title={todo.title}
