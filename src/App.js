@@ -8,9 +8,9 @@ import './App.css';
 export default class App extends React.Component{
     constructor(props) {
         super(props);
-        const todolist = localStorage.getItem("todolist");
+        const todolistJSON = localStorage.getItem("todolist");
         this.state = {
-            todoList: JSON.parse(todolist, this.json_deserialize_helper) ?? [],
+            todoList: JSON.parse(todolistJSON, this.json_deserialize_helper) ?? [],
             showModal: false,
         };
     }
