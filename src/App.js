@@ -32,7 +32,7 @@ export default class App extends React.Component{
 
                 <SiteHeader
                     addTodo={() => this.setState({ showModal: true })}
-                    clearTodo={() => this.clearTodo()}
+                    clearTodo={this.clearTodo}
                 />
                 <TodoList
                     todo={this.state.todoList}
