@@ -1,7 +1,13 @@
 import Todo from "./Todo";
 
 export default function TodoList(props) {
-    const todoList = props.todo.map((todo) => {
+    return (
+        <ol className="todo-list">
+            {props.todo.map(getTodo)}
+        </ol>
+    )
+
+    function getTodo(todo) {
         return (
             <Todo
                 title={todo.title}
@@ -12,11 +18,5 @@ export default function TodoList(props) {
                 key={+todo.dateAdded}
             />
         )
-    });
-
-    return (
-        <ol className="todo-list">
-            {todoList}
-        </ol>
-    )
+    }
 }
