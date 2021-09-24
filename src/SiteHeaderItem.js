@@ -3,15 +3,9 @@ import React from "react";
 function SiteHeaderItem(props) {
     return (
         <li className="site-header-item">
-            <a
-                href={props.href}
-                onClick={(e) => {
-                    e.preventDefault();
-                    props.onClick();
-                }}
-            >
+            <button onClick={props.onClick}>
                 {props.value}
-            </a>
+            </button>
         </li>
     );
 }
