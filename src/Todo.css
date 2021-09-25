@@ -9,6 +9,7 @@
 
 .remove-button {
   all: unset;
+  font-size: 0.85rem;
   position: absolute;
   right: 0;
   cursor: pointer;
