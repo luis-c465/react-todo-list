@@ -31,6 +31,7 @@
 }
 
 .todo h4 {
+  color: grey;
   font-size: 0.75rem;
   margin: 0.2em auto;
 }
