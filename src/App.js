@@ -4,6 +4,7 @@ import SiteHeader from './SiteHeader';
 import TodoList from "./TodoList";
 import MakeTodoForm from "./MakeTodoForm";
 import './App.css';
+import './ColorScheme.css';
 
 export default class App extends React.Component{
     constructor(props) {
