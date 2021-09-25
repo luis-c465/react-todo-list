@@ -1,6 +1,6 @@
 .site-header {
   display: flex;
-  background-color: lightsteelblue;
+  background-color: rgb(25, 160, 180);
   border: 5px;
   border-bottom: solid 0.3rem;
 }
