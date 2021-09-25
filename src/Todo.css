@@ -1,7 +1,8 @@
 .todo {
   border: 2.5px;
   border-style: groove;
-  width: 65%;
+  padding-right: 20%;
+  max-width: fit-content;
 }
 
 .remove-button {
