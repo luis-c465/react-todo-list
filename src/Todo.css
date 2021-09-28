@@ -3,7 +3,7 @@
   border: 2.5px;
   border-style: groove;
   border-radius: 2.5px;
-  padding: 10px;
+  padding-left: 10px;
   padding-right: 20%;
   color: whitesmoke;
 }
@@ -22,6 +22,7 @@
 }
 
 .todo h2 {
+  padding-top: 10px;
   color: lightskyblue;
   font-size: 2rem;
   margin: 0 auto;
