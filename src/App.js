@@ -5,7 +5,7 @@ import TodoList from "./TodoList";
 import MakeTodoForm from "./MakeTodoForm";
 import './App.css';
 
-export default class App extends React.Component{
+export default class App extends React.Component {
     constructor(props) {
         super(props);
         const todolistJSON = localStorage.getItem("todolist");
