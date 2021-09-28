@@ -1,8 +1,7 @@
 .todo {
   position: relative;
-  border: 2.5px;
-  border-style: groove;
-  border-radius: 2.5px;
+  border: 2.5px solid;
+  border-radius: 10px;
   padding-left: 10px;
   padding-right: 20%;
   color: whitesmoke;
